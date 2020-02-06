@@ -1,0 +1,36 @@
+<html>
+
+<title>Complex Routing</title>
+
+<body>
+
+<head>
+     {% load static %}
+     <link href="{% static 'styles.css' %}" rel="stylesheet">
+</head>
+
+<div class="body" align="center">
+
+
+<button id="commandStart" onclick="location.href='{% url 'record' %}'">Record Start</button>
+<button id="commandEnd" onclick="location.href='{% url 'output' %}'">Record End</button>
+
+
+<form method="post" action="/route/">
+    {% csrf_token %}
+    <div class="text-box">
+        <textarea rows="3" cols="78" name="input_text">{{ text }} </textarea>
+        <button id="getRoute">Get Route</button>
+    </div>
+</form>
+
+
+
+<iframe name="map_window" height="500" width="1000" border="0" marginwidth="0" marginheight="0" src={{ map_link }}></iframe>
+
+
+</div>
+
+
+</body>
+</html>

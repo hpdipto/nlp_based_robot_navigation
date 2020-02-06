@@ -1,0 +1,24 @@
+.body {
+    background-color: #c2f0f0;
+}
+
+
+#commandStart, #commandEnd{
+width: 438px;
+height: 40px;
+display: inline-block;
+}
+
+#getRoute {
+    width: 300px;
+    height: 60px;
+}
+
+form {
+    display: inline-block;
+}
+
+.text-box {
+    display: inline-flex;
+    align-items: center;
+}
